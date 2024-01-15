@@ -8,14 +8,28 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    padding: 10%;
     background: #2b2118;
     align-items: center;
     justify-content: center;
 }
 
 header {
-    background: #f7f3e3
+    background: #f7f3e3;
+}
+
+main {
+    padding: 10%;
+}
+
+footer {
+    background: #f7f3e3;
+}
+
+.faqCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .cardContainer {
@@ -26,6 +40,7 @@ header {
 
 .card {
     position: absolute;
+    display: flex;
     height: 100%;
     width: 100%;
     transform-style: preserve-3d;
