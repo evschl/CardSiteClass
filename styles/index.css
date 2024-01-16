@@ -14,7 +14,9 @@ body {
 }
 
 header {
-    background: #f7f3e3;
+    background-color: #f7f3e3;
+    width: 100%;
+    position: fixed;
 }
 
 main {
@@ -23,6 +25,16 @@ main {
 
 footer {
     background: #f7f3e3;
+    position: sticky;
+}
+
+#headerNav {
+    display: flex;
+    padding: 1% 2% 1%;
+}
+
+#logoContainer {
+    display: inline-flex;
 }
 
 .faqCards {
