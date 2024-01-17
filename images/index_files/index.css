@@ -14,13 +14,9 @@ body {
 }
 
 header {
-    background-color: #a8763e;
+    background-color: #f7f3e3;
     width: 100%;
     position: fixed;
-    border: 5px 5px 5px 0px;
-    border-radius: 0px 0px 10px 10px;
-    border-style: solid;
-    border-color: #6f1a07; 
 }
 
 main {
@@ -32,32 +28,13 @@ footer {
     position: sticky;
 }
 
-#headerNavContainer {
+#headerNav {
+    display: flex;
     padding: 1% 2% 1%;
-    flex-shrink: 0;
-    justify-content: space-between;
-}
-
-#homeBtn {
-    text-decoration: none;
-    color: #ecf0f1;
-}
-
-#arrowDrop {
-    background-color: #f7f3e3;
 }
 
 #logoContainer {
     display: inline-flex;
-    color: #ecf0f1;
-}
-
-#submitBtn {
-    color: #ecf0f1;
-}
-
-#arrow {
-    color: #ecf0f1;
 }
 
 .faqCards {
