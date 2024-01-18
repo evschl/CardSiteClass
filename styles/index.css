@@ -60,6 +60,28 @@ footer {
     color: #ecf0f1;
 }
 
+#marketplaceHomeContainer {
+    display: inline;
+    flex-wrap: wrap;
+}
+
+#articleHomeContainer {
+    display: inline;
+    flex-wrap: wrap;
+}
+
+#magicMarket, #sportMarket, #playingCardMarket {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+}
+
+#magicArticle, #sportArticle, #playingCardArticle {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 .faqCards {
     display: flex;
     flex-direction: row;
