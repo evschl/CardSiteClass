@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #2b2118;
     align-items: center;
     justify-content: center;
 }
@@ -25,11 +24,13 @@ header {
 
 main {
     padding: 10%;
+    background-color: #ffffe3;
 }
 
 footer {
-    background: #f7f3e3;
+    background: #6f1a07;
     position: sticky;
+    height: 20%;
 }
 
 #headerNavContainer {
@@ -60,26 +61,42 @@ footer {
     color: #ecf0f1;
 }
 
+#tutorialContainer {
+    font-style: italic;
+    opacity: 70%;
+}
+
+#sectionHeader {
+    text-align: center;
+}
+
 #marketplaceHomeContainer {
-    display: inline;
-    flex-wrap: wrap;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 #articleHomeContainer {
-    display: inline;
-    flex-wrap: wrap;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 #magicMarket, #sportMarket, #playingCardMarket {
     display: flex;
-    flex-wrap: wrap;
-    height: 200px;
+    flex-flow: row wrap;
+    width: 30%;
 }
 
-#magicArticle, #sportArticle, #playingCardArticle {
+#magicArticle, #sportArticle, #playingArticle {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    width: 50%;
+    padding: 5%;
+}
 
+#searchForm {
+    font-style: italic;
 }
 
 .faqCards {
