@@ -105,18 +105,7 @@ footer {
     justify-content: center;
     border: solid black 2px;
     border-radius: 5px;
-}
-
-#playingCardMarket {
     background-color: #FEFEFE;
-}
-
-#magicMarket {
-    background-color: #e8e8e6; 
-}
-
-#sportMarket {
-    background-color: #F0FFFF
 }
 
 #magicArticle, #sportArticle, #playingArticle {
