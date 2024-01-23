@@ -35,7 +35,6 @@ footer {
     position: sticky;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
     padding: 50px;
 }
 
@@ -56,6 +55,11 @@ footer {
 
 #logoContainer {
     display: inline-flex;
+    align-self: center;
+    color: #2b2118;
+}
+
+#footerLogoContainer {
     color: #2b2118;
 }
 
