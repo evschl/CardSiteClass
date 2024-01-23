@@ -17,8 +17,8 @@ body {
 
 header {
     background-color: #c8763e;
-    width: 100%;
     position: fixed;
+    width: 100%;
     border: 5px 5px 5px 0px;
     border-radius: 0px 0px 10px 10px;
     border-style: solid;
@@ -33,7 +33,10 @@ main {
 footer {
     background: #6f1a07;
     position: sticky;
-    height: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 50px;
 }
 
 #headerNavContainer {
@@ -42,7 +45,7 @@ footer {
     justify-content: space-between;
 }
 
-#homeBtn {
+#linkBtn {
     text-decoration: none;
     color: #2b2118;
 }
@@ -62,7 +65,7 @@ footer {
 
 #tutorialContainer {
     font-style: italic;
-    opacity: 70%;
+    color: gray;
 }
 
 #sectionHeader {
@@ -75,7 +78,7 @@ footer {
 #marketplaceHomeContainer {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 5%;
 }
 
@@ -92,8 +95,24 @@ footer {
 #magicMarket, #sportMarket, #playingCardMarket {
     display: flex;
     flex-flow: column wrap;
-    width: 30%;
+    height: 233px;
+    width: 167px;
     align-items: center;
+    justify-content: center;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+#playingCardMarket {
+    background-color: #FEFEFE;
+}
+
+#magicMarket {
+    background-color: #e8e8e6; 
+}
+
+#sportMarket {
+    background-color: #F0FFFF
 }
 
 #magicArticle, #sportArticle, #playingArticle {
@@ -121,6 +140,11 @@ footer {
 #marketplaceImg {
     width: 100px;
     height: 100px;
+}
+
+#footerImg {
+    width: 30px;
+    height: 30px;
 }
 
 .faqCards {

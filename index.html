@@ -34,7 +34,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" id="submitBtn" type="submit"><img id="searchImg" src="images/search.png" class="searchBtn"></button>
                     </form>
                 </div>
-                <a href="index.html" id="homeBtn">
+                <a href="index.html" id="linkBtn">
                     <div class="d-flex" id="siteTitle">
                         <h1>CardCommunity</h1>
                     </div>
@@ -65,21 +65,27 @@
             <div class="container-sm" id="bodyContainer">
                 <h2 id="sectionHeader">Marketplaces</h2>
                 <div class="container-sm" id="marketplaceHomeContainer">
-                    <div class="container-sm" id="playingCardMarket">
-                        <a href="marketplace.html"><img id="marketplaceImg" src="images/clubs.png"></a>
-                        <br>
-                        <p id="marketplaceText">Playing Cards</p>
-                    </div> 
-                    <div class="container-sm" id="sportMarket">
-                        <a href="marketplace.html"><img id="marketplaceImg" src="images/bat.png"></a>
-                        <br>
-                        <p id="marketplaceText">Sports Cards</p>
-                    </div> 
-                    <div class="container-sm" id="magicMarket">
-                        <a href="marketplace.html"><img id="marketplaceImg" src="images/clash.png"></a>
-                        <br>
-                        <p id="marketplaceText">Trading/Collectible Card Games</p>
-                    </div>            
+                    <a id="linkBtn" href="marketplace.html">
+                        <div class="shadow-lg container-sm" id="sportMarket">
+                            <img id="marketplaceImg" src="images/bat.png">
+                            <br>
+                            <p id="marketplaceText">Sports Cards</p>
+                        </div> 
+                    </a>
+                    <a id="linkBtn" href="marketplace.html">
+                        <div class="shadow-lg container-sm" id="playingCardMarket">
+                            <img id="marketplaceImg" src="images/clubs.png">
+                            <br>
+                            <p id="linkBtn">Playing Cards</p>
+                        </div> 
+                    </a>
+                    <a id="linkBtn" href="marketplace.html">
+                        <div class="shadow-lg container-sm" id="magicMarket">
+                            <img id="marketplaceImg" src="images/clash.png">
+                            <br>
+                            <p id="marketplaceText">Trading/Collectible Card Games</p>
+                        </div>
+                    </a>            
                 </div>
                 <br>
                 <hr>
@@ -93,6 +99,19 @@
         </main>
 
         <footer class="bg-gradient">
+            <div class="container-sm" id="logoContainer">
+                <p>[</p>
+                    <a href="marketplace.html">
+                        <img id="footerImg" src="images/bat.png" class="imgSports">
+                    </a>
+                    <a href="marketplace.html">
+                        <img id="footerImg" src="images/clubs.png" class="imgPlaying">
+                    </a>
+                    <a href="marketplace.html">
+                        <img id="footerImg" src="images/clash.png" class="imgTCG">
+                    </a>
+                <p>]</p>
+            </div>
             <a id="footLink" href="https://github.com/evschl/CardSiteClass">Site GitHub Repo</a>
             <a id="footLink" href="https://github.com/evschl">My GitHub</a>
             <ln></ln>
