@@ -79,6 +79,10 @@ footer {
     gap: 5%;
 }
 
+#marketplaceText {
+    text-align: center;
+}
+
 #articleHomeContainer {
     display: flex;
     flex-flow: row wrap;
@@ -87,13 +91,14 @@ footer {
 
 #magicMarket, #sportMarket, #playingCardMarket {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     width: 30%;
+    align-items: center;
 }
 
 #magicArticle, #sportArticle, #playingArticle {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     width: 50%;
     gap: 5%;
     padding-bottom: 5%;
@@ -111,6 +116,11 @@ footer {
 #searchImg {
     width: 20px;
     height: 0px;
+}
+
+#marketplaceImg {
+    width: 100px;
+    height: 100px;
 }
 
 .faqCards {
