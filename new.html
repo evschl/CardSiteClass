@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <title>Sell ♣ CardCommunity</title>
         <link rel="stylesheet" type="text/css" href="styles/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +20,11 @@
                         <ul class="dropdown-menu" id="arrowDrop">
                             <li><a class="dropdown-item" href="#">Login / Sign Up [NOT YET WORKING]</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item">Browse</a></li>
-                            <li><a class="dropdown-item" href="#">Sell</a></li>
+                            <li><a class="dropdown-item" href="items.html">Browse</a></li>
+                            <li><a class="dropdown-item" href="new.html">Sell</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item">Articles [NOT YET WORKING]</a></li>
-                            <li><a class="dropdown-item" href="#">FAQ [NOT YET WORKING]</a></li>
+                            <li><a class="dropdown-item" href="#">Articles [NOT YET WORKING]</a></li>
+                            <li><a class="dropdown-item" href="faq.html">FAQ [NOT YET WORKING]</a></li>
                             <li><a class="dropdown-item" href="#">Contact Us [NOT YET WORKING]</a></li>
                         </ul>
                     </div>
@@ -34,7 +35,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" id="submitBtn" type="submit"><img id="searchImg" src="images/search.png" class="searchBtn"></button>
                     </form>
                 </div>
-                <a href="index.html" id="homeBtn">
+                <a href="index.html" id="linkBtn">
                     <div class="d-flex" id="siteTitle">
                         <h1>CardCommunity</h1>
                     </div>
@@ -58,33 +59,62 @@
         <main>
             <div class="newItemContainer">
                 <div class="container-sm" id="newItemInputContainer">
-                    <div class="container-sm" id="parameters">
-                        <label for="itemNameInput">Item Name: </label>
-                        <label for="itemPriceInput">Price: </label>
-                        <label for="itemConditionInput">Condition: </label>
-                        <label for="itemCategoryInput">Category: </label>
-                        <label for="itemSubcategoryInput">Subcategory: </label>
-                    </div>
-                    <div class="container-sm" id="inputs">
+                    <div class="container-sm" id="formContainer">
+                        <label id="parameter" for="itemNameInput">Name -- </label>
                         <input type="text" id="itemNameInput" name="itemNameInput" required><br>
-                        <input type="text" id="itemPriceInput" name="itemPriceInput" required><br>
+                    </div>
+                    <br>
+                    <div class="container-sm" id="formContainer">
+                        <label id="parameter" for="itemPriceInput">Price -- </label>
+                        <input type="number" id="itemPriceInput" name="itemPriceInput" required><br>
+                    </div>
+                    <br>
+                    <div class="container-sm" id="formContainer">
+                        <label id="parameter" for="itemConditionInput">Condition -- </label>
                         <input type="text" id="itemConditionInput" name="itemConditionInput" required><br>
+                    </div>
+                    <br>
+                    <div class="container-sm" id="formContainer">
+                        <label id="parameter" for="itemCategoryInput">Category -- </label>
                         <input type="text" id="itemCategoryInput" name="itemCategoryInput" required><br>
-                        <input type="text" id="itemSubcategoryInput" name="itemSubcategoryInput" required><br>
+                    </div>
+                    <br>
+                    <div class="container-sm" id="formContainer">
+                        <label id="parameter" for="itemSubcategoryInput">Subcategory -- </label>
+                        <input type="text" id="itemSubcategoryInput" name="itemSubcategoryInput"><br>
                     </div>
                 </div>
-                <div class="container-sm" id="termsAndAgreementsContainer"></div>
-                    <label for="termsAndAgreements">I have read the <a href="#">terms and agreements</a></label>
+            </div>
+            <br>
+            <div class="termsAgreeSubmit">
+                <div class="container-sm" id="termsAndAgreementsContainer">
                     <input type="checkbox" id="termsAndAgreements" name="termsAndAgreements"><br>
+                    <label for="termsAndAgreements"> - I have read the <a href="#">terms and agreements</a></label>
                 </div>
+                <button id="newItemSubmit" type="submit">Submit</button>
             </div>
         </main>
 
         <footer class="bg-gradient">
-            <a id="footLink" href="https://github.com/evschl/CardSiteClass">Site GitHub Repo</a>
-            <a id="footLink" href="https://github.com/evschl">My GitHub</a>
-            <ln></ln>
-            <a id="footLink" href="help.html">Help</a>
+            <div class="container-sm" id="footContainer">
+                <div class="container-sm" id="logoContainer">
+                    <p>[</p>
+                        <a href="items.html">
+                            <img id="footerImg" src="images/bat.png" class="imgSports">
+                        </a>
+                        <a href="items.html">
+                            <img id="footerImg" src="images/clubs.png" class="imgPlaying">
+                        </a>
+                        <a href="items.html">
+                            <img id="footerImg" src="images/clash.png" class="imgTCG">
+                        </a>
+                    <p>]</p>
+                </div>
+                <a id="footLink" href="https://github.com/evschl/CardSiteClass">Site GitHub Repo</a>
+                <a id="footLink" href="https://github.com/evschl">My GitHub</a>
+                <ln></ln>
+                <a id="footLink" href="help.html">Help</a>
+            </div>
         </footer>
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
