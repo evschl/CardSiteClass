@@ -9,11 +9,47 @@
         - #FF7A0E
 */
 
+/* ------------------------------- */ 
+/* -- Multi-page/General Styles -- */
+/* ------------------------------- */
+
 body {
     font-family: 'Montserrat', sans-serif;
     align-items: center;
     justify-content: center;
 }
+
+#logoContainer {
+    display: inline-flex;
+    align-self: center;
+    color: #2b2118;
+}
+
+#linkBtn {
+    text-decoration: none;
+    color: #2b2118;
+}
+
+main {
+    padding: 10%;
+    background-color: #ffffe3;
+}
+
+#sectionHeader {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    font-style: italic;
+}
+
+#marketplaceImg {
+    width: 100px;
+    height: 100px;
+}
+
+/* --------------------------- */ 
+/* ------ Header Styles ------ */
+/* --------------------------- */
 
 header {
     background-color: #c8763e;
@@ -25,46 +61,80 @@ header {
     border-color: #6f1a07; 
 }
 
-main {
-    padding: 10%;
-    background-color: #ffffe3;
-}
-
-footer {
-    background: #6f1a07;
-    position: sticky;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 50px;
-}
-
 #headerNavContainer {
     padding: 1% 2% 1%;
     flex-shrink: 0;
     justify-content: space-between;
 }
 
-#linkBtn {
-    text-decoration: none;
-    color: #2b2118;
-}
-
 #arrowDrop {
     background-color: #f7f3e3;
 }
 
-#logoContainer {
-    display: inline-flex;
-    align-self: center;
-    color: #2b2118;
+#submitBtn {
+    color: #ecf0f1;
+}
+
+#searchForm {
+    font-style: italic;
+}
+
+#headerImg {
+    width: 50px;
+    height: 50px;
+}
+
+#searchImg {
+    width: 20px;
+    height: 0px;
+}
+
+/* ----------------------------- */ 
+/* ------- Footer Styles ------- */
+/* ----------------------------- */
+
+footer {
+    background: #6f1a07;
+    position: sticky;
+    padding: 25px;
+}
+
+#footLink {
+    text-decoration: none;
+    color: #ecf0f1;
+}
+
+#footLink:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#footContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 #footerLogoContainer {
-    color: #2b2118;
+    color: #ecf0f1;
 }
 
-#submitBtn {
-    color: #ecf0f1;
+#footerImg {
+    width: 30px;
+    height: 30px;
+}
+
+/* --------------------------- */ 
+/* ----- Homepage Styles ----- */
+/* --------------------------- */
+
+#marketplaceText {
+    text-align: center;
 }
 
 #tutorialContainer {
@@ -72,22 +142,11 @@ footer {
     color: gray;
 }
 
-#sectionHeader {
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 2%;
-    font-style: italic;
-}
-
 #marketplaceHomeContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     gap: 5%;
-}
-
-#marketplaceText {
-    text-align: center;
 }
 
 #articleHomeContainer {
@@ -116,29 +175,59 @@ footer {
     padding-bottom: 5%;
 }
 
-#searchForm {
-    font-style: italic;
+/* ---------------------------- */ 
+/* ---- Marketplace Styles ---- */
+/* ---------------------------- */
+
+#marketplaceContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 5%;
 }
 
-#headerImg {
-    width: 50px;
-    height: 50px;
+#itemContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    width: fit-content;
+    height: fit-content;
 }
 
-#searchImg {
-    width: 20px;
-    height: 0px;
+#item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 233px;
+    width: 167px;
+    border: solid black 2px;
+    border-radius: 5px;
+    background-color: #FEFEFE;
 }
 
-#marketplaceImg {
-    width: 100px;
-    height: 100px;
+#itemDetails {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
 }
 
-#footerImg {
-    width: 30px;
-    height: 30px;
+#itemPrice {
+    color: #6f1a07;
+    width: fit-content;
+    height: fit-content;
 }
+
+#itemNameCond {
+    color: #2B2118;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* ---------- UNUSED ---------- */ 
+/* ----- Card Flip Styles ----- */
+/* ---------- UNUSED ---------- */
 
 .faqCards {
     display: flex;
