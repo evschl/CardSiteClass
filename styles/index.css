@@ -20,9 +20,12 @@ body {
 }
 
 #logoContainer {
-    display: inline-flex;
-    align-self: center;
+    display: flex;
     color: #2b2118;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
 }
 
 #linkBtn {
@@ -117,7 +120,6 @@ footer {
     text-align: center;
     height: 100%;
     width: 100%;
-    position: absolute;
 }
 
 #footerLogoContainer {
@@ -179,18 +181,16 @@ footer {
 /* ---- Marketplace Styles ---- */
 /* ---------------------------- */
 
-#marketplaceContainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 5%;
-}
-
 #itemContainer {
     display: flex;
     flex-flow: column nowrap;
     width: fit-content;
     height: fit-content;
+    margin-bottom: 20%;
+}
+
+#itemContainer:hover {
+    font-style: italic;
 }
 
 #item {
@@ -203,6 +203,7 @@ footer {
     border: solid black 2px;
     border-radius: 5px;
     background-color: #FEFEFE;
+    align-self: center;
 }
 
 #itemDetails {
@@ -217,12 +218,41 @@ footer {
     color: #6f1a07;
     width: fit-content;
     height: fit-content;
+    text-align: center;
+    align-self: center;
 }
 
-#itemNameCond {
+#itemNameCond, #itemCategory {
     color: #2B2118;
     width: fit-content;
     height: fit-content;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+/* ----------------------------- */ 
+/* ------ New Item Styles ------ */
+/* ----------------------------- */
+#newItemContainer {
+    color: #2B2118;
+}
+
+#newItemInputContainer {
+    color: #2B2118;
+}
+
+#parameters {
+    color: #2B2118;
+}
+
+#inputs {
+    color: #2B2118;
+}
+
+#termsAndAgreements {
+    color: #2B2118;
 }
 
 /* ---------- UNUSED ---------- */ 
