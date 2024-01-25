@@ -6,7 +6,7 @@
         Palette
         - https://coolors.co/a8763e-f7f3e3-ecf0f1-6f1a07-2b2118
         Mythic Orange
-        - #FF7A0E
+        - .FF7A0E
 */
 
 /* ------------------------------- */ 
@@ -19,7 +19,7 @@ body {
     justify-content: center;
 }
 
-#logoContainer {
+.logoContainer {
     display: flex;
     color: #2b2118;
     text-align: center;
@@ -28,7 +28,7 @@ body {
     font-size: 150%;
 }
 
-#linkBtn {
+.linkBtn {
     text-decoration: none;
     color: #2b2118;
 }
@@ -38,14 +38,14 @@ main {
     background-color: #ffffe3;
 }
 
-#sectionHeader {
+.sectionHeader {
     text-align: center;
     padding-top: 1%;
     padding-bottom: 2%;
     font-style: italic;
 }
 
-#marketplaceImg {
+.marketplaceImg {
     width: 100px;
     height: 100px;
 }
@@ -64,30 +64,30 @@ header {
     border-color: #6f1a07; 
 }
 
-#headerNavContainer {
+.headerNavContainer {
     padding: 1% 2% 1%;
     flex-shrink: 0;
     justify-content: space-between;
 }
 
-#arrowDrop {
+.arrowDrop {
     background-color: #f7f3e3;
 }
 
-#submitBtn {
+.submitBtn {
     color: #ecf0f1;
 }
 
-#searchForm {
+.searchForm {
     font-style: italic;
 }
 
-#headerImg {
+.headerImg {
     width: 50px;
     height: 50px;
 }
 
-#searchImg {
+.searchImg {
     width: 20px;
     height: 0px;
 }
@@ -97,22 +97,22 @@ header {
 /* ----------------------------- */
 
 footer {
-    background: #6f1a07;
+    background: .6f1a07;
     position: sticky;
     padding: 25px;
 }
 
-#footLink {
+.footLink {
     text-decoration: none;
     color: #ecf0f1;
 }
 
-#footLink:hover {
+.footLink:hover {
     text-decoration: underline;
     font-style: italic;
 }
 
-#footContainer {
+.footContainer {
     display: flex;
     flex-flow: column nowrap;
     margin: auto;
@@ -122,11 +122,11 @@ footer {
     width: 100%;
 }
 
-#footerLogoContainer {
+.footerLogoContainer {
     color: #ecf0f1;
 }
 
-#footerImg {
+.footerImg {
     width: 30px;
     height: 30px;
 }
@@ -135,29 +135,29 @@ footer {
 /* ----- Homepage Styles ----- */
 /* --------------------------- */
 
-#marketplaceText {
+.marketplaceText {
     text-align: center;
 }
 
-#tutorialContainer {
+.tutorialContainer {
     font-style: italic;
     color: gray;
 }
 
-#marketplaceHomeContainer {
+.marketplaceHomeContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     gap: 5%;
 }
 
-#articleHomeContainer {
+.articleHomeContainer {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
 
-#magicMarket, #sportMarket, #playingCardMarket {
+.magicMarket, .sportMarket, .playingCardMarket {
     display: flex;
     flex-flow: column wrap;
     height: 233px;
@@ -169,7 +169,7 @@ footer {
     background-color: #FEFEFE;
 }
 
-#magicArticle, #sportArticle, #playingArticle {
+.magicArticle, .sportArticle, .playingArticle {
     display: flex;
     flex-flow: column wrap;
     width: 50%;
@@ -181,7 +181,7 @@ footer {
 /* ---- Marketplace Styles ---- */
 /* ---------------------------- */
 
-#itemContainer {
+.itemContainer {
     display: flex;
     flex-flow: column nowrap;
     width: fit-content;
@@ -189,11 +189,11 @@ footer {
     margin-bottom: 20%;
 }
 
-#itemContainer:hover {
+.itemContainer:hover {
     font-style: italic;
 }
 
-#item {
+.item {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -206,7 +206,7 @@ footer {
     align-self: center;
 }
 
-#itemDetails {
+.itemDetails {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -214,7 +214,7 @@ footer {
     height: fit-content;
 }
 
-#itemPrice {
+.itemPrice {
     color: #6f1a07;
     width: fit-content;
     height: fit-content;
@@ -222,7 +222,7 @@ footer {
     align-self: center;
 }
 
-#itemNameCond, #itemCategory {
+.itemNameCond, .itemCategory {
     color: #2B2118;
     width: fit-content;
     height: fit-content;
@@ -235,17 +235,17 @@ footer {
 /* ----------------------------- */ 
 /* ------ New Item Styles ------ */
 /* ----------------------------- */
-#newItemContainer {
+.newItemContainer {
     color: #2B2118;
 }
 
-#newItemInputContainer {
+.newItemInputContainer {
     color: #2B2118;
     display: flex;
     flex-flow: column nowrap;
 }
 
-#parameter {
+.parameter {
     display: flex;
     flex-flow: column wrap;
     color: #2B2118;
@@ -254,7 +254,7 @@ footer {
     padding-right: 15px;
 }
 
-#itemNameInput, #itemPriceInput, #itemConditionInput, #itemCategoryInput, #itemSubcategoryInput {
+.itemNameInput, .itemPriceInput, .itemConditionInput, .itemCategoryInput, .itemSubcategoryInput {
     display: flex;
     flex-flow: column wrap;
     color: #2b2118;
@@ -262,28 +262,28 @@ footer {
     align-items: flex-start;
 }
 
-#formContainer {
+.formContainer {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
     align-items: center;
 }
 
-#termsAndAgreementsContainer {
+.termsAndAgreementsContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-#termsAgreeSubmit {
+.termsAgreeSubmit {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
 
-#newItemSubmit {
+.newItemSubmit {
     display: flex;
     align-self: center;
 }
@@ -292,7 +292,7 @@ footer {
 /* ------ Edit Item Styles ------ */
 /* ------------------------------ */
 
-#itemBigImg {
+.itemBigImg {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -305,14 +305,14 @@ footer {
     align-self: center;
 }
 
-#displayedItem {
+.displayedItem {
     display: flex;
     flex-flow: column nowrap;
     width: fit-content;
     height: fit-content;
 }
 
-#itemEditDelete {
+.itemEditDelete {
     color: #2B2118;
     display: flex;
     flex-flow: row wrap;
@@ -322,29 +322,29 @@ footer {
     height: fit-content;
 }
 
-#editBtnContainer {
+.editBtnContainer {
     color: #2B2118;
     width: fit-content;
     height: fit-content;
 }
 
-#deleteBtnContainer {
+.deleteBtnContainer {
     color: #2B2118;
     width: fit-content;
     height: fit-content;
 }
 
-#itemInfoBtns {
+.itemInfoBtns {
     text-align: center;
 }
 
-#editBtn {
+.editBtn {
     color: #2B2118;
     width: fit-content;
     height: fit-content;
 }
 
-#deleteBtn {
+.deleteBtn {
     color: #2B2118;
     width: fit-content;
     height: fit-content;
