@@ -1,6 +1,25 @@
 <%- include('../partials/header.ejs') %>
         <main>
             <div id="marketplaceHomeContainer">
+                <% if(items.length) { %>
+                    <% items.forEach(item=>{ %>
+                        <a id="linkBtn" href="/items/<%-item.id%>">
+                            <div class="container-sm" id="itemContainer">
+                                <div class="container-sm" id="item">
+                                    <img id="marketplaceImg" src=".<%-item.image%>" alt="marketImg">
+                                </div>
+                                <div id="itemDetails" class="container-sm">
+                                    <div id="itemNameCond"><%-item.name%> [<%-item.condition%>]</div>
+                                    <div id="itemCategory"><%-item.category%> | <%-item.subcategory%></div>
+                                    <div id="itemPrice">$<%-item.price%>+</div>
+                                </div>
+                            </div>
+                        </a>
+                    <% }); %>
+                <% } else { %>
+                    <p>There are no items to display.</p>
+                <% } %>
+                <!--
                 <a id="linkBtn" href="item.ejs">
                 <div class="container-sm" id="itemContainer">
                     <div class="container-sm" id="item">
@@ -78,6 +97,7 @@
                     </div>
                 </div>
                 </a>
+                -->
             </div>
         </main>
 <%- include('../partials/footer.ejs') %>
