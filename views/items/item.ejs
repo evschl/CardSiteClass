@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+        <main>
+            <div class="container-sm" id="displayedItem">
+                <div class="container-sm" id="itemBigImg">
+                    <h2>PLACEHOLDER</h2>
+                </div>
+                <br>
+                <div class="container-sm" id="itemInfoBtns">
+                    <p><%= item.name %> - <%= item.condition %></p>
+                    <p><%= item.category %> - <%= item.subcategory %></p>
+                </div>
+                <div class="container-sm" id="itemEditDelete">
+                    <div class="container-sm" id="editBtnContainer">
+                        <button id="editBtn" type="submit">Edit</button>
+                    </div>
+                    <div class="container-sm" id="deleteBtnContainer">
+                        <button id="deleteBtn" type="submit">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+<%- include('../partials/footer.ejs') %>
