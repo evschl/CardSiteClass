@@ -12,10 +12,10 @@
                 </div>
                 <div class="container-sm" id="itemEditDelete">
                     <div class="container-sm" id="editBtnContainer">
-                        <button id="editBtn" type="submit">Edit</button>
+                        <button id="editBtn" type="submit" formmethod="GET" formaction="/items/<%= item.id %>/edit">Edit</button>
                     </div>
                     <div class="container-sm" id="deleteBtnContainer">
-                        <button id="deleteBtn" type="submit">Delete</button>
+                        <button id="deleteBtn" type="submit" formmethod="POST" formaction="/items/<%= item.id %>?_method=DELETE">Delete</button>
                     </div>
                 </div>
             </div>
