@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/storyController');
+const controller = require('../controllers/marketController');
 
 //GET /items: Send all items to the user
 router.get('/', controller.index);
