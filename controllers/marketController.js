@@ -3,12 +3,12 @@ const model = require('../models/itemListing');
 //GET /items: Send user to marketplace
 exports.index = (req, res) => {
     let items = model.find();
-    res.render('./items/index', {items});
+    res.render('./card/index', {items});
 };
 
 //GET /items/new: Send html for creating a new item
 exports.new = (req, res) => {
-    res.render('./items/new');
+    res.render('./card/new');
 };
 
 //POST /items: Create a new item
@@ -23,7 +23,7 @@ exports.show = (req, res, next) => {
     let id = req.params.id;
     let item = model.findById(id);
     if(item){
-        res.render('./items/item', {item});
+        res.render('./card/item', {item});
     }else{ 
         let err = new Error("Cannot find an item with id " + id + ".");
         err.status = 404;
@@ -36,7 +36,7 @@ exports.edit = (req, res, next) => {
     let id = req.params.id;
     let item = model.findById(id);
     if(item) {
-        res.render('./item/edit', {item});
+        res.render('./card/edit', {item});
     } else {
         let err = new Error("Cannot find item with id " + id + ".");
         err.status = 404;
