@@ -1,6 +1,6 @@
 <%- include('./partials/header.ejs') %>
 <div class="content">
-    <form method="POST" action="/items/<%= item.id%>?_method=PUT" class="new-form">
+    <form method="POST" action="/items/<%= item.id %>?_method=PUT" class="new-form">
         <label for="image">Image</label>
         <input type="file" id="image" name="image" accept="image/png, image/jpeg" value="<%= item.image %>">
 
