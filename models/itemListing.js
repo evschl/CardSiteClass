@@ -4,62 +4,80 @@ const {v4: uuidv4} = require('uuid');
 const items = [
     {
         id: '1',
+        active: true,
         name: 'Mind Goblin',
-        image: './public/images/mindgoblin.jpg',
+        image: 'mindgoblin.jpg',
         condition: 'LP',
         category: 'TCG',
         subcategory: 'Magical Meeting',
-        price: 3.25,
-        posted: DateTime.fromISO('2024-01-24T17:30:000').toFormat('ff')
+        price: '3.25',
+        details: "Details go here",
+        totalOffers: 0,
+        posted: DateTime.now().toLocaleString(DateTime.DATETIME_MED)
     },
     {
         id: '2',
+        active: true,
         name: 'Gisele, Heiress of Winds',
-        image: './public/images/gisele.jpg',
+        image: 'gisele.jpg',
         condition: 'MP',
         category: 'TCG',
         subcategory: 'Magical Meeting',
-        price: 1.50,
-        posted: DateTime.fromISO('2024-01-25T17:30:000').toFormat('ff')
+        price: '1.50',
+        details: "Details go here",
+        totalOffers: 0,
+        posted: DateTime.now().toLocaleString(DateTime.DATETIME_MED)
     },
     {
         id: '3',
+        active: true,
         name: 'Bazooka Cannon',
-        image: './public/images/bazookacannon.jpg',
+        image: 'bazookacannon.jpg',
         condition: 'NM',
         category: 'TCG',
         subcategory: 'CardBattle',
-        price: 11.25,
-        posted: DateTime.fromISO('2024-01-26T17:30:000').toFormat('ff')
+        price: '11.25',
+        details: "Details go here",
+        totalOffers: 0,
+        posted: DateTime.now().toLocaleString(DateTime.DATETIME_MED)
     },
     {
         id: '4',
+        active: true,
         name: 'Tarot Themed (54pcs)',
-        image: './public/images/tarot.jpg',
+        image: 'tarot.jpg',
         condition: 'NM',
         category: 'Playing',
         subcategory: 'Themed',
-        price: 18.65,
-        posted: DateTime.fromISO('2024-01-27T17:30:000').toFormat('ff')
+        price: '18.65',
+        details: "Details go here",
+        totalOffers: 0,
+        posted: DateTime.now().toLocaleString(DateTime.DATETIME_MED)
     },
     {
         id: '5',
+        active: true,
         name: 'Replacement Jokers (2)',
-        image: './public/images/jokers.jpg',
+        image: 'jokers.jpg',
         condition: 'NM',
         category: 'Playing',
         subcategory: '',
-        price: 0.17,
-        posted: DateTime.fromISO('2024-01-28T17:30:000').toFormat('ff')
+        price: '0.17',
+        details: "Details go here",
+        totalOffers: 0,
+        posted: DateTime.now().toLocaleString(DateTime.DATETIME_MED)
     },
     {
         id: '6',
+        active: true,
         name: 'Matthew Tkachuk',
-        image: './public/images/matthewtkachuk.jpg',
+        image: 'matthewtkachuk.jpg',
         condition: 'NM (PSA 9.5)',
         category: 'Sports',
         subcategory: 'NHL',
-        price: 550.00,
+        price: '550.00',
+        details: "Details go here",
+        totalOffers: 0,
         posted: DateTime.now().toLocaleString(DateTime.DATETIME_MED)
     },
 ];
@@ -71,7 +89,10 @@ exports.findById = id => items.find(item => item.id === id);
 //Creates new ID for item and saves it to array
 exports.save = function(item) {
     item.id = uuidv4();
-    item.createdAt = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+    item.active = true;
+    item.image = "#";
+    item.totalOffers = 0;
+    item.posted = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
     items.push(item);
 };
 

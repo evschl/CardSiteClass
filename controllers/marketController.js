@@ -1,5 +1,30 @@
 const model = require('../models/itemListing');
 
+/*
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, '/public/images');
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now() + Math.round(Math.random() * 1E9);
+        cb(null, uniqueSuffix + path.extname(file.originalname));
+    }
+});
+
+const fileFilter = (req, res, cb) => {
+    const mimeTypes = ['image/jpeg', 'image/png'];
+    if(mimeTypes.includes(file.mimeType))
+        return cb(null, true);
+    else
+        cb(new Error('Invalid file type. Only jpg, jpeg, and png are accepted.', false));
+}
+
+const upload = multer({storage, fileFilter});
+*/
+
 //GET /items: Send user to marketplace
 exports.index = (req, res) => {
     let items = model.find();
@@ -23,7 +48,7 @@ exports.show = (req, res, next) => {
     let id = req.params.id;
     let item = model.findById(id);
     if(item){
-        res.render('./card/item', {item});
+        res.render('./card/show', {item});
     }else{ 
         let err = new Error("Cannot find an item with id " + id + ".");
         err.status = 404;

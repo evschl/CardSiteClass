@@ -1,12 +1,13 @@
 <%- include('../partials/header.ejs') %>
         <main>
             <div id="marketplaceHomeContainer">
+                <% console.log(items) %>
                 <% if(items.length) { %>
                     <% items.forEach(item=>{ %>
                         <a id="linkBtn" href="/items/<%-item.id%>">
                             <div class="container-sm" id="itemContainer">
                                 <div class="container-sm" id="item">
-                                    <img id="marketplaceImg" src=".<%-item.image%>" alt="marketImg">
+                                    <img id="marketplaceImg" src="../images/<%-item.image%>" alt="marketImg">
                                 </div>
                                 <div id="itemDetails" class="container-sm">
                                     <div id="itemNameCond"><%-item.name%> [<%-item.condition%>]</div>

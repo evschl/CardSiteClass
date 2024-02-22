@@ -46,8 +46,8 @@ main {
 }
 
 #marketplaceImg {
-    width: 100px;
     height: 100px;
+    width: 100px;
 }
 
 /* --------------------------- */ 
@@ -288,13 +288,21 @@ footer {
     align-self: center;
 }
 
+.itemShowImg {
+    height: 388px;
+    width: 276px;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+}
+
 /* ------------------------------ */ 
 /* ------ Edit Item Styles ------ */
 /* ------------------------------ */
 
 #itemBigImg {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     height: 393px;

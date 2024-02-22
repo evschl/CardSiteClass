@@ -2,13 +2,17 @@
         <main>
             <div class="container-sm" id="displayedItem">
                 <div class="container-sm" id="itemBigImg">
-                    <h2>PLACEHOLDER</h2>
+                    <img class="itemShowImg" src="../images/<%-item.image%>" alt="itemBigImg">
                 </div>
                 <br>
+
+                <%= console.log(item) %>
                 <div class="container-sm" id="itemInfoBtns">
                     <p><%= item.name %> - <%= item.condition %></p>
                     <p><%= item.category %> - <%= item.subcategory %></p>
-                    <p><%= item.price %></p>
+                    <p>$<%= item.price %> - Total Offers: <%= item.totalOffers %></p>
+                    <p>Posted: <%= item.posted %></p>
+                    <p><%= item.details %></p>
                 </div>
                 <div class="container-sm" id="itemEditDelete">
                     <form>
