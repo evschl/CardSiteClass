@@ -26,9 +26,10 @@ const upload = multer({storage, fileFilter});
 */
 
 //GET /items: Send user to marketplace
-exports.index = (req, res) => {
-    let items = model.find();
-    res.render('./card/index', {items});
+exports.index = (req, res, next) => {
+    model.find()
+    .then(items=>res.render('./card/index', {items}))
+    .catch(err=>next(err));
 };
 
 //GET /items/new: Send html for creating a new item
@@ -38,57 +39,110 @@ exports.new = (req, res) => {
 
 //POST /items: Create a new item
 exports.create = (req, res) => {
-    let item = req.body;
-    model.save(item);
-    res.redirect('/items');
+    let item = new model(req.body);
+
+    item.save()
+    .then(item=>res.redirect('/items'))
+    .catch(err=>{
+        if(err.name === 'ValidationError') {
+            err.status = 400;
+        }
+        next(err);
+    });
 }
 
 //GET /items/:id: Send the details of an item identified by id
 exports.show = (req, res, next) => {
     let id = req.params.id;
-    let item = model.findById(id);
-    if(item){
-        res.render('./card/show', {item});
-    }else{ 
-        let err = new Error("Cannot find an item with id " + id + ".");
+
+    if(!id.match(/^[0-9a-fA-F]{24}$/)){
+        let err = new Error('Invalid item id');
         err.status = 404;
-        next(err);
+        return next(err);
     }
+
+    model.findById(id)
+    .then(item=>{
+        if(item) {
+            res.render('./card/show', {item});
+        } else {
+            let err = new Error('Cannot find item with id ' + id);
+            err.status = 404;
+            next(err);
+        }
+    })
+    .catch(err=>next(err));
 };
 
 //GET /items/:id/edit: Send html form for editing an existing item
 exports.edit = (req, res, next) => {
     let id = req.params.id;
-    let item = model.findById(id);
-    if(item) {
-        res.render('./card/edit', {item});
-    } else {
-        let err = new Error("Cannot find item with id " + id + ".");
+
+    if(!id.match(/^[0-9a-fA-F]{24}$/)){
+        let err = new Error('Invalid item id');
         err.status = 404;
-        next(err);
+        return next(err);
     }
+
+    model.findById(id)
+    .then(item=>{
+        if(item) {
+            return res.render('./card/edit', {item});
+        } else {
+            let err = new Error("Cannot find item with id " + id + ".");
+            err.status = 404;
+            next(err);
+        }
+    })
+    .catch(err=>next(err));
 };
 
 //PUT /items/:id: Update item by id
 exports.update = (req, res, next) => {
     let item = req.body;
     let id = req.params.id;
-    if(model.updateById(id, item)) {
-        res.redirect('/items/' + id);
-    } else {
-        let err = new Error("Cannot find item with id " + id + ".");
+
+    if(!id.match(/^[0-9a-fA-F]{24}$/)){
+        let err = new Error('Invalid item id');
         err.status = 404;
-        next(err);
+        return next(err);
     }
+
+    model.findByIdAndUpdate(id, item, {useFindAndModify: false, runValidators: true})
+    .then(item=>{
+        if(item) {
+            res.redirect('/items/' + id);
+        } else {
+            let err = new Error("Cannot find item with id " + id + ".");
+            err.status = 404;
+            next(err);
+        }
+    })
+    .catch(err=>{
+        if(err.name === 'ValidationError') {
+            err.status = 400;
+        }
+        next(err)
+    });
 };
 
 exports.delete = (req, res, next) => {
     let id = req.params.id;
-    if(model.deleteById(id)) {
-        res.redirect('/items');
-    } else {
-        let err = new Error("Cannot find item with id " + id + ".");
+    if(!id.match(/^[0-9a-fA-F]{24}$/)){
+        let err = new Error('Invalid item id');
         err.status = 404;
-        next(err);
+        return next(err);
     }
+
+    model.findByIdAndDelete(id, item, {useFindAndModify: false})
+    .then(item=>{
+        if(item) {
+            res.redirect('/items');
+        } else {
+            let err = new Error("Could not delete item with id " + id + ".");
+            err.status = 404;
+            next(err);
+        }
+    })
+    .catch(err=>next(err));
 }
