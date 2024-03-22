@@ -122,7 +122,7 @@ exports.update = (req, res, next) => {
         if(err.name === 'ValidationError') {
             err.status = 400;
         }
-        next(err)
+        next(err);
     });
 };
 
@@ -134,15 +134,15 @@ exports.delete = (req, res, next) => {
         return next(err);
     }
 
-    model.findByIdAndDelete(id, item, {useFindAndModify: false})
+    model.findByIdAndDelete(id, {useFindAndModify: false})
     .then(item=>{
         if(item) {
             res.redirect('/items');
         } else {
-            let err = new Error("Could not delete item with id " + id + ".");
+            let err = new Error("Could not find item with id " + id + ".");
             err.status = 404;
-            next(err);
+            return next(err);
         }
     })
     .catch(err=>next(err));
-}
+};
