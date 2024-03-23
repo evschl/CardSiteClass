@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
-    _id: {type: Number},
     active: {type: Boolean},
     name: {type: String, required: [true, 'Name of item is required']},
     image: {type: String, required: [true, 'Must include at least one picture of item']},

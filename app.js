@@ -1,8 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const multer = require('multer');
-const path = require('path');
 const mongoose = require('mongoose');
 const marketRoutes = require('./routes/marketRoutes');
 
@@ -12,7 +10,7 @@ const app = express();
 //configure app
 let port = 5000;
 let host = 'localhost';
-let url = 'mongodb+srv://eschlee:jRzpfuRZEG2zxjzy@cluster0.bk7hkvj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+let url = 'mongodb+srv://eschlee:jRzpfuRZEG2zxjzy@cluster0.bk7hkvj.mongodb.net/nbda-project3?retryWrites=true&w=majority&appName=Cluster0';
 app.set('view engine', 'ejs');
 
 //connect to MongoDB
@@ -20,7 +18,8 @@ mongoose.connect(url)
 .then(()=>{
     app.listen(port, host, ()=>{
         console.log("Server is running on port", port);
-    })
+        console.log(url);
+    });
 })
 .catch(err=>console.log(err.message));
 
@@ -44,7 +43,8 @@ app.use((req, res, next)=>{
 });
 
 app.use((err, req, res, next)=>{
-    if(err.status) {
+    console.log(err.stack)
+    if(!err.status) {
         err.status = 500;
         err.message = ("Internal Server Error");
     }
